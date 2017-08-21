@@ -1,0 +1,20 @@
+{
+  "welcome": {
+    "js": "/assets/welcome.chunk.js"
+  },
+  "login": {
+    "js": "/assets/login.chunk.js"
+  },
+  "home": {
+    "js": "/assets/home.chunk.js"
+  },
+  "not-found": {
+    "js": "/assets/not-found.chunk.js"
+  },
+  "client": {
+    "js": "/assets/client.js"
+  },
+  "vendor": {
+    "js": "/assets/vendor.js"
+  }
+}
