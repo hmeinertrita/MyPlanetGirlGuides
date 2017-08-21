@@ -29,7 +29,15 @@ const routes = {
     },
     {
       path: '/results',
-      load: () => import(/* webpackChunkName: 'welcome' */ './results'),
+      load: () => import(/* webpackChunkName: 'results' */ './results'),
+    },
+    {
+      path: '/details',
+      load: () => import(/* webpackChunkName: 'details' */ './details'),
+    },
+    {
+      path: '/search',
+      load: () => import(/* webpackChunkName: 'search' */ './search'),
     },
     // Wildcard routes, e.g. { path: '*', ... } (must go last)
     {
