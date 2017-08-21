@@ -14,7 +14,7 @@ import Layout from '../../components/Layout';
 function action() {
   return {
     chunks: ['home'],
-    title: 'ApplyBoard Challenge',
+    title: 'Girl Scout',
     component: (
       <Layout>
         <Home />

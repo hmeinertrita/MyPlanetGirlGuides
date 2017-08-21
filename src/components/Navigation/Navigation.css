@@ -1,65 +1,46 @@
 /**
- * React Starter Kit (https://www.reactstarterkit.com/)
- *
- * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
+* React Starter Kit (https://www.reactstarterkit.com/)
+*
+* Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+*
+* This source code is licensed under the MIT license found in the
+* LICENSE.txt file in the root directory of this source tree.
+*/
 
 .root {
-  float: right;
-  margin: 6 0 0;
+ float: right;
+ margin: 6px 0 0;
 }
 
 .link {
-  display: inline-block;
-  padding: 3px 8px;
-  text-decoration: none;
-  font-size: 1.125em; /* ~18px */
+ display: inline-block;
+ padding: 3px 8px;
+ text-decoration: none;
+ font-size: 1.125em; /* ~18px */
 }
 
 .link,
 .link:active,
 .link:visited {
-  color: rgba(255, 255, 255, 0.6);
+ color: rgba(255, 255, 255, 0.6);
 }
 
 .link:hover {
-  color: rgba(255, 255, 255, 1);
+ color: rgba(255, 255, 255, 1);
 }
 
-.container {
-  padding-right: 5px;
-  padding-left: 5px;
-  margin-right: auto;
-  margin-left: auto;
+.highlight {
+ margin-right: 8px;
+ margin-left: 8px;
+ border-radius: 3px;
+ background: rgba(0, 0, 0, 0.15);
+ color: #fff;
 }
 
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
+.highlight:hover {
+ background: rgba(0, 0, 0, 0.3);
 }
 
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
-
-.navbar-default {
-  border-color: rgba(34, 34, 34, 0.05);
-  background-color: #fff;
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  transition: all 0.35s;
-  font-family: Roboto, sans-serif;
-  font-size: 25px;
+.spacer {
+ color: rgba(255, 255, 255, 0.3);
 }

@@ -44,11 +44,6 @@ class Html extends React.Component {
           <title>
             {title}
           </title>
-          {/* Import Bootstrap */}
-          <link
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-            rel="stylesheet"
-          />
           <meta name="description" content={description} />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           {scripts.map(script =>
