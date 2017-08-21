@@ -1,6 +1,6 @@
 # Welcome to [Applyboard's](http://applyboard.com/) React Challenge 😬 <a href="https://twitter.com/applyboard"><img src="https://img.shields.io/twitter/follow/applyboard.svg?style=social&label=Follow" height="20"></a>
 
-Thanks for applying to work with us here at Applyboard! Here's a little challenge to play around with so we can see what you come up with! 
+Thanks for applying to work with us here at Applyboard! Here's a little challenge to play around with so we can see what you come up with!
 
 It's a solid starting point for you to get an idea of what we work with every day at Applyboard in order to help international students realize their futures.
 
@@ -97,14 +97,14 @@ The challenge consists of four parts. They slowly increase in difficulty so you 
 <i>The header is the default style for the react-starter-kit that I bootlegged.</i>
 
 **Task:**
-Redesign this to reflect ApplyBoard's colors (with our logo). 
+Redesign this to reflect ApplyBoard's colors (with our logo).
 
 **Tip:** Bonus points for not totally ripping off our existing header on our site.
 
 ## Welcome Page (45 min)
 <i>In the /login route (localhost:3000/login), you'll notice that clicking on Log in doesn't do anything. We want it to direct the user to a "Welcome" page.</i>
 
-**Task:** Design a beautiful "welcome" page. Hook it up in universal-router and redirect the user to the route when they click "Log in". 
+**Task:** Design a beautiful "welcome" page. Hook it up in universal-router and redirect the user to the route when they click "Log in".
 
 **Tip:** Ensure to use universal-router and not just a simple href! You'll need to hook up universal-router properly for this in order to proceed to the next task!
 
@@ -129,9 +129,9 @@ Add cool CSS animations (react-animations or bodymovin). Check out https://codep
 **Tip:** Though passing this little bit of data is simple, please use redux properly and access your data from within the welcome page component!
 
 **Bonus:** Just as a bonus, access the user's name that you've stored in Task 2 from the welcome component's parent. Count the number of characters in their name (either as an action prior to storing or after fetching) and pass it as a prop to your Welcome component - Then display the count as a subtitle ("Your name has x characters!").
- 
+
 # SUBMISSIONS 🏁
-Submitting should be simple. 
+Submitting should be simple.
 
 Just create a new repo under your account and link me to it (send me the link - toby@applyboard.com).
 
@@ -163,7 +163,7 @@ Check out our career page for more :)
   * Twitter: [@guutoby](twitter.com/guutoby) - ask me questions here if you want to wait forever a reply.
   * Email: toby@applyboard.com ask me questions here if you want a response within 12 hrs.
   * Instagram: [@guutoby](https://instagram.com/guutoby) - for ideas on how to sweet talk me during the our interview
-  
+
 
 
 
@@ -171,8 +171,7 @@ Check out our career page for more :)
 ---
 Hacked together with ♥ by Toby Gu based off of the [react-starter-kit](https://github.com/kriasoft/react-starter-kit)
 
-\[rsk]: https://www.reactstarterkit.com 
+\[rsk]: https://www.reactstarterkit.com
 <br>
 \[demo]: http://demo.reactstarterkit.com
 <br>
-
