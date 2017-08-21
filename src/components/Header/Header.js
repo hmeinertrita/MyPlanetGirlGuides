@@ -29,7 +29,7 @@ class Header extends React.Component {
               height="38"
               alt="React"
             />
-            <span className={s.brandTxt}>ApplyBoard logo here</span>
+            <span className={s.brandTxt}>ApplyBoard logo</span>
           </Link>
         </div>
       </div>

@@ -16,5 +16,8 @@
   },
   "vendor": {
     "js": "/assets/vendor.js"
+  },
+  "ome": {
+    "js": "/assets/ome.chunk.js"
   }
 }
