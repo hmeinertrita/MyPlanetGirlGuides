@@ -14,7 +14,7 @@
 }
 
 .root {
-  background: #373277;
+  background: #004077;
   color: #fff;
 }
 
@@ -30,6 +30,12 @@
   font-size: 1.75em; /* ~28px */
 }
 
+.brand img {
+  -ms-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
 .brandTxt {
   margin-left: 10px;
+  color: #fff;
 }

@@ -17,7 +17,7 @@ class Navigation extends React.Component {
  render() {
    return (
      <div className={s.root} role="navigation">
-       <Link className={s.link} to="/about">
+       {/* <Link className={s.link} to="/about">
          About
        </Link>
        <Link className={s.link} to="/contact">
@@ -30,7 +30,11 @@ class Navigation extends React.Component {
        <span className={s.spacer}>or</span>
        <Link className={cx(s.link, s.highlight)} to="/register">
          Sign up
+       </Link> */
+       <Link className={cx(s.link, s.highlight)} to="/search">
+         Search
        </Link>
+       }
      </div>
    );
  }
