@@ -13,7 +13,7 @@ import s from './Header.css';
 import Link from '../Link';
 import Navigation from '../Navigation';
 import logoUrl from './logo-small.png';
-import logoUrl2x from './logo-small@2x.png';
+import logoUrl2x from './girlguides.png';
 
 class Header extends React.Component {
   render() {
@@ -29,7 +29,7 @@ class Header extends React.Component {
               height="38"
               alt="React"
             />
-            <span className={s.brandTxt}>ApplyBoard logo here</span>
+            <span className={s.brandTxt}>Girl Guides Analytics</span>
           </Link>
         </div>
       </div>
