@@ -11,6 +11,9 @@
   "not-found": {
     "js": "/assets/not-found.chunk.js"
   },
+  "search": {
+    "js": "/assets/search.chunk.js"
+  },
   "results": {
     "js": "/assets/results.chunk.js"
   },
