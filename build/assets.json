@@ -11,6 +11,12 @@
   "not-found": {
     "js": "/assets/not-found.chunk.js"
   },
+  "results": {
+    "js": "/assets/results.chunk.js"
+  },
+  "details": {
+    "js": "/assets/details.chunk.js"
+  },
   "client": {
     "js": "/assets/client.js"
   },
