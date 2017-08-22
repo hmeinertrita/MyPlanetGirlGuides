@@ -1,4 +1,7 @@
 {
+  "details": {
+    "js": "/assets/details.chunk.js"
+  },
   "welcome": {
     "js": "/assets/welcome.chunk.js"
   },
@@ -16,9 +19,6 @@
   },
   "results": {
     "js": "/assets/results.chunk.js"
-  },
-  "details": {
-    "js": "/assets/details.chunk.js"
   },
   "client": {
     "js": "/assets/client.js"

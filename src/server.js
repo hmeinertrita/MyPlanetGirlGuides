@@ -34,6 +34,29 @@ import config from './config';
 
 const app = express();
 
+//Testing api
+var NaturalLanguageUnderstandingV1 = require('watson-developer-cloud/natural-language-understanding/v1.js');
+
+var file_data = 'http://google.ca';
+var nlu = new NaturalLanguageUnderstandingV1({
+  username: 'b1218426-57d9-4015-8299-3468b7baec38',
+  password: 'BNOIMjzlHR74',
+  version_date: NaturalLanguageUnderstandingV1.VERSION_DATE_2017_02_27
+});
+
+var parameters = {
+  'url': 'www.ibm.com',
+  'features': {
+    'categories': {}
+  }
+};
+
+nlu.analyze(parameters, function(err, response) {
+  if (err)
+    console.log('error:', err);
+  else
+    console.log(JSON.stringify(response, null, 2));
+});
 //
 // Tell any CSS tooling (such as Material UI) to use all vendor prefixes if the
 // user agent is not known.
