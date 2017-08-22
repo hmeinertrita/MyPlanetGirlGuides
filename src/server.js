@@ -32,6 +32,10 @@ import configureStore from './store/configureStore';
 import { setRuntimeVariable } from './actions/runtime';
 import config from './config';
 
+// Import Mongoose & twitter
+import mongoose from 'mongoose';
+import twitter from 'twitter';
+
 const app = express();
 
 //
@@ -49,6 +53,10 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+//
+// Connect to MongoDB
+// -----------------------------------------------------------------------------
+mongoose.connect('mongodb://localhost/react-tweets');
 //
 // Authentication
 // -----------------------------------------------------------------------------
