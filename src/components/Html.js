@@ -78,9 +78,6 @@ class Html extends React.Component {
               async
               defer
             />}
-            {<script
-                src="https://cdn.socket.io/socket.io-1.1.0.js"
-              />}
         </body>
       </html>
     );

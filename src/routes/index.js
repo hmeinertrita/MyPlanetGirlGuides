@@ -41,7 +41,7 @@ const routes = {
     },
     {
       path: '/twitter',
-      load: () => import(/* webpackChunkName: 'search' */ './twitter'),
+      load: () => import(/* webpackChunkName: 'twitter' */ './twitter'),
     },
     // Wildcard routes, e.g. { path: '*', ... } (must go last)
     {

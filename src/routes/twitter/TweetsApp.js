@@ -8,7 +8,8 @@
  */
 
 import React from 'react';
-import Tweets from './Tweets'
+import Tweets from './Tweets';
+import axios from 'axios';
 
 class TweetsApp extends React.Component {
 
@@ -19,7 +20,7 @@ class TweetsApp extends React.Component {
     updated.unshift(tweet);
     this.setState({tweets: updated, count: count, skip: skip});
   }
-  
+
   showNewTweets() {
     // Retrieve the current application state
     let updated = this.state.tweets;
@@ -44,13 +45,37 @@ class TweetsApp extends React.Component {
     }
   }
 
-  componentDidMount() {
-    let self = this;
-    let socket = io.connect();
-    socket.on('tweet', function (data) {
-      self.addTweet(data);
+  // Method to get JSON from server by page
+  getPage() {
+    axios.get(`/page/${this.state.page}/${this.state.skip}`).then(function(response) {
+      console.log(response);
+    })
+    .catch(function(error) {
+      console.log(error);
     });
-    // window.addEventListener('scroll', this.checkWindowScroll);
+  }
+
+//   checkWindowScroll(){
+//
+//   // Get scroll pos & window data
+//   var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+//   var s = (document.body.scrollTop || document.documentElement.scrollTop || 0);
+//   var scrolled = (h + s) > document.body.offsetHeight;
+//
+//   // If scrolled enough, not currently paging and not complete...
+//   if(scrolled && !this.state.paging && !this.state.done) {
+//
+//     // Set application state (Paging, Increment page)
+//     this.setState({paging: true, page: this.state.page + 1});
+//
+//     // Get the next page of tweets from the server
+//     this.getPage(this.state.page);
+//
+//   }
+// }
+
+  componentDidMount() {
+    this.getPage()
   }
 
   constructor(props) {
@@ -69,7 +94,7 @@ class TweetsApp extends React.Component {
     console.log(this.state);
     return (
       <div>
-        YUUUR
+        {/* <Tweets tweets={this.state.tweets}/> */}
       </div>
     );
   }

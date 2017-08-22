@@ -1,10 +1,12 @@
 var Tweet = require('../models/mongodb/Tweet');
 
-module.exports = function(stream, io){
+var io = require('socket.io')
+
+module.exports = function(stream){
 
   // When tweets get sent our way ...
   stream.on('data', function(data) {
-    console.log('THE DATA', data)
+    // console.log('Tweet data', data);
 
     if (data['user'] !== undefined) {
 
@@ -21,12 +23,13 @@ module.exports = function(stream, io){
 
       // Create a new model instance with our object
       var tweetEntry = new Tweet(tweet);
+      // console.log('TWEET', tweetEntry)
 
       // Save 'er to the database
       tweetEntry.save(function(err) {
         if (!err) {
           // If everything is cool, socket.io emits the tweet.
-          io.emit('tweet', tweet);
+          // io.emit('tweet', tweet);
         }
       });
 
