@@ -9,29 +9,22 @@
 
 import React from 'react';
 import {connect} from 'react-redux';
-import StringList from './StringList/StringList'
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import s from './StringList.css';
 
-class Search extends React.Component {
+class StringEntry extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
   render() {
-    const styles = {
-      fontFamily: 'Helvetica Neue',
-      fontSize: 14,
-      lineHeight: '10px',
-      color: 'white',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }
+
     return (
-      <div>
-        <StringList />
+      <div className={s.entry}>
+        {this.props.text}
       </div>
     );
   }
 }
 
-export default Search;
+export default withStyles(s)(StringEntry);

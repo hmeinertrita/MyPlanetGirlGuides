@@ -1,0 +1,9 @@
+.entry {
+  width: 150px;
+
+  font-size: 7;
+  color: white;
+  background-color: lightgrey;
+  border-width: 5px;
+  border-radius: 7px;
+}
