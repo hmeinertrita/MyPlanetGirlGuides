@@ -7,8 +7,17 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
+ /**
+  * Image Sources:
+  * https://pixabay.com/p-1727490/?no_redirect
+ */
+
 import React from 'react';
 import {connect} from 'react-redux';
+
+import closeUrl from './close-button-small.png'
+import addUrl from './add-button-small.png'
+
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './StringList.css';
 
@@ -28,9 +37,9 @@ class StringEntry extends React.Component {
 
   render() {
     return (
-      <div>
-        <label>{this.props.word}</label>
-        <button onClick={this.deleteSelf}>X</button>
+      <div className={s.entry}>
+        <label className={s.entryLabel}>{this.props.word}</label>
+        <input className={s.deleteButton} type="image" src={closeUrl} onClick={this.deleteSelf} />
       </div>
     );
   }
@@ -71,7 +80,7 @@ class StringList extends React.Component {
 
     const excluded=this.state.excluded.map((i) => i);
     var word=this.state.inputValue;
-    word.toLowerCase();
+    word=word.toLowerCase();
     excluded.splice(0,0,word);
 
     this.setState({
@@ -98,15 +107,14 @@ class StringList extends React.Component {
       );
     });
     return (
-      <div>
-        Search Set
-        <ul>
-          <form onSubmit={this.addItem}>
-            <input onChange={this.handleChange} value={this.state.inputValue}/>
-            <button>Add</button>
-          </form>
+      <div className={s.root}>
+        <form className={s.addForm} onSubmit={this.addItem}>
+          <input className={s.addField} onChange={this.handleChange} value={this.state.inputValue}/>
+          <input type="image" src={addUrl} />
+        </form>
+        <div className={s.container}>
           {excludedWords}
-        </ul>
+        </div>
       </div>
     );
   }

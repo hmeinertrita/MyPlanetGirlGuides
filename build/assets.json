@@ -8,11 +8,11 @@
   "home": {
     "js": "/assets/home.chunk.js"
   },
-  "not-found": {
-    "js": "/assets/not-found.chunk.js"
-  },
   "search": {
     "js": "/assets/search.chunk.js"
+  },
+  "not-found": {
+    "js": "/assets/not-found.chunk.js"
   },
   "results": {
     "js": "/assets/results.chunk.js"
