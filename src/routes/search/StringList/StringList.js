@@ -9,6 +9,8 @@
 
 import React from 'react';
 import {connect} from 'react-redux';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import s from './StringList.css';
 
 class StringEntry extends React.Component {
   constructor(props) {
@@ -68,7 +70,9 @@ class StringList extends React.Component {
     event.preventDefault();
 
     const excluded=this.state.excluded.map((i) => i);
-    excluded.push(this.state.inputValue);
+    var word=this.state.inputValue;
+    word.toLowerCase();
+    excluded.splice(0,0,word);
 
     this.setState({
       excluded: excluded,
@@ -83,18 +87,10 @@ class StringList extends React.Component {
     }
 
   render() {
-    const styles = {
-      fontFamily: 'Helvetica Neue',
-      fontSize: 14,
-      lineHeight: '10px',
-      color: 'white',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }
     const excludedWords=this.state.excluded.map((word,idx)=>{
       return (
         <StringEntry
+          className = {s.entry}
           id={idx}
           word={word}
           deleteItem={this.deleteItem}
@@ -105,15 +101,15 @@ class StringList extends React.Component {
       <div>
         Search Set
         <ul>
-          {excludedWords}
           <form onSubmit={this.addItem}>
             <input onChange={this.handleChange} value={this.state.inputValue}/>
             <button>Add</button>
           </form>
+          {excludedWords}
         </ul>
       </div>
     );
   }
 }
 
-export default StringList;
+export default withStyles(s)(StringList);
