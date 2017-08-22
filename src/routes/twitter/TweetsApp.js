@@ -12,11 +12,39 @@ import Tweets from './Tweets'
 
 class TweetsApp extends React.Component {
 
+  showNewTweets() {
+
+    // Retrieve the current application state
+    let updated = this.state.tweets;
+
+    updated
+
+
+  }
+
+  componentDidMount() {
+    let self = this;
+    let socket = io.connect();
+    socket.on('tweet', function (data) {
+      self.addTweet(data);
+    });
+    // window.addEventListener('scroll', this.checkWindowScroll);
+  }
+
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      tweets: props.tweets,
+      count: 0,
+      page: 0,
+      paging: false,
+      skip: 0,
+      done: false
+    };
   }
+
   render() {
+    // console.log(this.state);
     return (
       <div>
         YUUUR
