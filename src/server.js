@@ -54,10 +54,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //
-// Connect to MongoDB
-// -----------------------------------------------------------------------------
-mongoose.connect('mongodb://localhost/react-tweets');
-//
 // Authentication
 // -----------------------------------------------------------------------------
 app.use(
@@ -116,6 +112,19 @@ app.use(
     pretty: __DEV__,
   })),
 );
+
+//
+// Connect to MongoDB
+// -----------------------------------------------------------------------------
+mongoose.connect('mongodb://localhost/react-tweets');
+
+//
+// Create a new twitter instance
+// -----------------------------------------------------------------------------
+let twit = new twitter(config.auth.twitter);
+
+// console.log('config', config)
+// console.log('twitter', twit)
 
 //
 // Register server-side rendering middleware

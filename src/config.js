@@ -59,9 +59,11 @@ module.exports = {
 
     // https://apps.twitter.com/
     twitter: {
-      key: process.env.TWITTER_CONSUMER_KEY || 'ldmAaF78oCe0oDbVyt9FqHm4l',
-      secret:
-        process.env.TWITTER_CONSUMER_SECRET ||
+      consumer_key:
+      // process.env.TWITTER_CONSUMER_KEY || 
+      'ldmAaF78oCe0oDbVyt9FqHm4l',
+      consumer_secret:
+        // process.env.TWITTER_CONSUMER_SECRET ||
         'sTySm8vpsL5DynMz1d9GuOrSUKZyRpWAv6hlAM5QNvRD9XCNVu',
       access_token_key: '298940916-kvCW13qGVL3O4zIAhqTsH5DcmXCR380di2JaqjcC',
       access_token_secret: 'R7c1UIrzb1NxCCXUM9MREcn6siWgvH0FaH2GnlzZSnU5c',
