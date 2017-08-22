@@ -8,25 +8,18 @@
  */
 
 import React from 'react';
+import Tweets from './Tweets'
 
 class TweetsApp extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {};
   }
   render() {
-    const styles = {
-      fontFamily: 'Helvetica Neue',
-      fontSize: 14,
-      lineHeight: '10px',
-      color: 'white',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }
     return (
       <div>
-        Search Setup
+        YUUUR
       </div>
     );
   }
