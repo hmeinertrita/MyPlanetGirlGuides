@@ -1,9 +1,10 @@
-import Tweet from '../models/mongodb/Tweet';
+var Tweet = require('../models/mongodb/Tweet');
 
 module.exports = function(stream, io){
 
   // When tweets get sent our way ...
   stream.on('data', function(data) {
+    console.log('THE DATA', data)
 
     if (data['user'] !== undefined) {
 

@@ -17,7 +17,7 @@ if (process.env.BROWSER) {
 
 module.exports = {
   // Node.js app
-  port: process.env.PORT || 3000,
+  port: process.env.PORT || 8080,
 
   // API Gateway
   api: {
@@ -60,7 +60,7 @@ module.exports = {
     // https://apps.twitter.com/
     twitter: {
       consumer_key:
-      // process.env.TWITTER_CONSUMER_KEY || 
+      // process.env.TWITTER_CONSUMER_KEY ||
       'ldmAaF78oCe0oDbVyt9FqHm4l',
       consumer_secret:
         // process.env.TWITTER_CONSUMER_SECRET ||

@@ -35,6 +35,7 @@ import config from './config';
 // Import Mongoose & twitter
 import mongoose from 'mongoose';
 import twitter from 'twitter';
+import streamHandler from './data/utils/streamHandler';
 
 const app = express();
 
@@ -240,6 +241,15 @@ if (!module.hot) {
     });
   });
 }
+
+let io = require('socket.io').listen(promise)
+
+twit.stream('statuses/filter',{ track: 'girlscouts,girlguidescanada,girlguides,girlguidescookies'}, function(stream){
+  // console.log('stream',stream)
+  streamHandler(stream,io);
+});
+
+
 
 //
 // Hot Module Replacement

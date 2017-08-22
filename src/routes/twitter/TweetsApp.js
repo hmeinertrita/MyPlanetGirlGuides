@@ -12,14 +12,36 @@ import Tweets from './Tweets'
 
 class TweetsApp extends React.Component {
 
+  addTweet(tweet) {
+    let updated = this.state.tweets;
+    let count = this.state.count + 1;
+    let skip = this.state.skip + 1;
+    updated.unshift(tweet);
+    this.setState({tweets: updated, count: count, skip: skip});
+  }
+  
   showNewTweets() {
-
     // Retrieve the current application state
     let updated = this.state.tweets;
+    updated.forEach(function(tweet){
+      tweet.active = true;
+    });
+    this.setState({tweets: updated, count: 0});
+  }
 
-    updated
-
-
+  loadPagedTweets(tweets) {
+    let self = this;
+    if(tweets.length > 0) {
+      let updated = this.state.tweets;
+      tweets.forEach(function(tweet){
+        updated.push(tweet);
+      });
+      setTimeout(function(){
+        self.setState({tweets:updated, paging: false});
+      }, 1000);
+    } else {
+      this.setState({done: true, paging: false});
+    }
   }
 
   componentDidMount() {
@@ -44,7 +66,7 @@ class TweetsApp extends React.Component {
   }
 
   render() {
-    // console.log(this.state);
+    console.log(this.state);
     return (
       <div>
         YUUUR
