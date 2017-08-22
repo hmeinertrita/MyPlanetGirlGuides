@@ -8,14 +8,14 @@
   "home": {
     "js": "/assets/home.chunk.js"
   },
+  "results": {
+    "js": "/assets/results.chunk.js"
+  },
   "not-found": {
     "js": "/assets/not-found.chunk.js"
   },
   "search": {
     "js": "/assets/search.chunk.js"
-  },
-  "results": {
-    "js": "/assets/results.chunk.js"
   },
   "details": {
     "js": "/assets/details.chunk.js"
