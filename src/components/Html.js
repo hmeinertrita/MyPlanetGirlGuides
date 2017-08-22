@@ -33,7 +33,6 @@ class Html extends React.Component {
     styles: [],
     scripts: [],
   };
-
   render() {
     const { title, description, styles, scripts, app, children } = this.props;
     return (
@@ -79,6 +78,9 @@ class Html extends React.Component {
               async
               defer
             />}
+            {<script
+                src="https://cdn.socket.io/socket.io-1.1.0.js"
+              />}
         </body>
       </html>
     );
