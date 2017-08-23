@@ -1,6 +1,6 @@
 /* csslint ignore:start */
 
-@import '../../components/variables.css';
+@import '../../../components/variables.css';
 
 .homepageheader {
   position: relative;

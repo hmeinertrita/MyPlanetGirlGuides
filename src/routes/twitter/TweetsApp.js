@@ -8,7 +8,7 @@
  */
 
 import React from 'react';
-import Tweets from './Tweets';
+import Tweets from './Tweets/Tweets';
 import axios from 'axios';
 
 class TweetsApp extends React.Component {

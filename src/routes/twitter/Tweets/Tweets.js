@@ -1,5 +1,5 @@
 import React from 'react';
-import Tweet from './Tweet';
+import Tweet from '../Tweet/Tweet';
 
 // import withStyles from 'isomorphic-style-loader/lib/withStyles';
 // import s from './Tweet.css';
