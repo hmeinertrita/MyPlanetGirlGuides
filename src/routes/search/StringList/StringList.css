@@ -1,0 +1,48 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  margin: 10px 0px;
+  width: 170px;
+  height: 200px;
+  overflow: auto;
+}
+
+.entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 150px;
+  height: 24px;
+  margin-top: 5px;
+
+  font-size: 7;
+  color: #878c96;
+  background-color: #e6e9ef;
+  border: 2px solid;
+  border-radius: 5px;
+}
+
+.deleteButton {
+  margin: 0 5px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.entryLabel {
+  margin: 0 5px;
+}
+
+.addForm {
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.addField {
+  width: 150px;
+  border-radius: 12px;
+}

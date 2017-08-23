@@ -9,6 +9,7 @@
 
 import React from 'react';
 import {connect} from 'react-redux';
+import StringList from './StringList/StringList'
 
 class Search extends React.Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class Search extends React.Component {
     }
     return (
       <div>
-        Search Setup
+        <StringList />
       </div>
     );
   }
