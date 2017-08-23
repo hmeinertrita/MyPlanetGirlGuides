@@ -55,14 +55,12 @@ class StringList extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  returnList() {
-    this.props.returnList(this.state.strings);
-  }
-
   deleteItem(id) {
     const strings=this.state.strings.map((i) => i);
 
     strings.splice(id,1);
+
+    this.props.returnList(strings);
 
     this.setState({
       strings: strings

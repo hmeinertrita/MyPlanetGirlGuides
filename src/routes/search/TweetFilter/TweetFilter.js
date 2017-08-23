@@ -18,10 +18,12 @@ class TweetFilter extends React.Component {
     super(props);
     this.state = {
       includedWords: [],
+      includedUsers: [],
       tweets: [],
       filteredTweets: []
     };
     this.getWords = this.getWords.bind(this);
+    this.getUsers = this.getUsers.bind(this);
     this.getTweets = this.getTweets.bind(this);
     this.filter = this.filter.bind(this);
   }
@@ -29,6 +31,12 @@ class TweetFilter extends React.Component {
   getWords(words) {
     this.setState({
       includedWords: words
+    });
+  }
+
+  getUsers(users) {
+    this.setState({
+      includedUsers: users
     });
   }
 
@@ -56,6 +64,14 @@ class TweetFilter extends React.Component {
         }
         return false;
       }
+      if (this.state.includedUsers.length>0) {
+        for (var i=0; i<this.state.includedUsers.length; i++) {
+          if (tweet.screenname.toLowerCase() === this.state.includedUsers[i].toLowerCase()) {
+            return true;
+          }
+        }
+        return false;
+      }
       return true;
     });
     this.setState({
@@ -68,7 +84,7 @@ class TweetFilter extends React.Component {
     return (
       <div>
         <StringList returnList={this.getWords}/>
-        <TwitterSelector />
+        <TwitterSelector returnUsers={this.getUsers} />
         <button onClick={this.filter}>Go!</button>
       </div>
     );

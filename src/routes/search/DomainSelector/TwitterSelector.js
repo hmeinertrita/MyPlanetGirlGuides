@@ -83,6 +83,9 @@ class TwitterSelector extends React.Component {
       hashtags.splice(id,1);
     }
 
+    this.props.returnUsers(users);
+    //this.props.returnHashtags(hashtags);
+
     this.setState({
       users: users,
       hashtags: hastags
@@ -104,6 +107,8 @@ class TwitterSelector extends React.Component {
       users.splice(0,0,text.substring(1,text.length));
     }
 
+    this.props.returnUsers(users);
+    //this.props.returnHashtags(hashtags);
 
     this.setState({
       users: users,
@@ -111,6 +116,7 @@ class TwitterSelector extends React.Component {
       inputValue: ""
     });
   }
+
 
   handleChange(event) {
     this.setState({
@@ -129,6 +135,7 @@ class TwitterSelector extends React.Component {
       return (
         <TwitterEntry
           className = {s.entry}
+          key={idx}
           id={idx}
           type='user'
           text={text}
@@ -140,6 +147,7 @@ class TwitterSelector extends React.Component {
       return (
         <TwitterEntry
           className = {s.entry}
+          key={idx}
           id={idx}
           type='hashtag'
           text={text}
