@@ -157,8 +157,11 @@ class TwitterSelector extends React.Component {
     });
     return (
       <div className={s.root}>
+        {/*
         <input type='radio' name='mode' value='exclusive' onChange={this.handleRadio}/>Exclusive
         <input type='radio' name='mode' value='inclusive' onChange={this.handleRadio}/>Inclusive
+        */}
+
         <form className={s.addForm} onSubmit={this.addItem}>
           <input className={s.addField} onChange={this.handleChange} value={this.state.inputValue}/>
           <input type="image" src={addUrl} />
