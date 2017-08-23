@@ -15,8 +15,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import closeUrl from './close-button-small.png'
-import addUrl from './add-button-small.png'
+import closeUrl from '../assets/close-button-small.png'
+import addUrl from '../assets/add-button-small.png'
 
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './StringList.css';

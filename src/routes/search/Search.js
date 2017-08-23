@@ -10,6 +10,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import StringList from './StringList/StringList'
+import TwitterSelector from './DomainSelector/TwitterSelector'
 
 class Search extends React.Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class Search extends React.Component {
     return (
       <div>
         <StringList />
+        <TwitterSelector />
       </div>
     );
   }

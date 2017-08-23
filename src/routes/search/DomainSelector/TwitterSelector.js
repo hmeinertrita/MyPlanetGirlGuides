@@ -62,12 +62,14 @@ class TwitterSelector extends React.Component {
     this.state = {
       users:[],
       hashtags:[],
-      inputValue: ''
+      inputValue: '',
+      inclusionMode: 'exclusive'
     };
 
     this.deleteItem = this.deleteItem.bind(this);
     this.addItem = this.addItem.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleRadio = this.handleRadio.bind(this);
   }
 
   deleteItem(id,type) {
@@ -116,6 +118,12 @@ class TwitterSelector extends React.Component {
     });
   }
 
+  handleRadio(event) {
+    this.setState({
+      inclusionMode: event.currentTarget.value
+    });
+  }
+
   render() {
     const users=this.state.users.map((text,idx)=>{
       return (
@@ -141,6 +149,8 @@ class TwitterSelector extends React.Component {
     });
     return (
       <div className={s.root}>
+        <input type='radio' name='mode' value='exclusive' onChange={this.handleRadio}/>Exclusive
+        <input type='radio' name='mode' value='inclusive' onChange={this.handleRadio}/>Inclusive
         <form className={s.addForm} onSubmit={this.addItem}>
           <input className={s.addField} onChange={this.handleChange} value={this.state.inputValue}/>
           <input type="image" src={addUrl} />
