@@ -45,3 +45,69 @@ img {
   max-width: 100%;
 }
 
+.main {
+  padding-top: 30vh;
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  .intro{
+    font-size: 30px;
+  }
+
+  a {
+    font-size: 20px;
+    text-decoration-line: none;
+    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: #004077;
+    border-radius: 5px;
+    color: #fff;
+    border: 0 none;
+    -webkit-transition: .3s ease all;
+    -moz-transition: .3s ease all;
+    -ms-transition: .3s ease all;
+    -o-transition: .3s ease all;
+    transition: .3s ease all;
+    &:hover {
+      background-color: #749dd3;
+    }
+  }
+
+
+  .background {
+    position: absolute;
+    top: 55vh;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    background: #00bbe4;
+
+    &:before{
+      content: "";
+      display: block;
+      position: absolute;
+      border-radius: 100% 50%;
+      width: 45%;
+      height: 120px;
+      background-color: #00bbe4;
+      right: -5px;
+      top: -50px;
+    }
+    &:after{
+      content: "";
+      display: block;
+      position: absolute;
+      border-radius: 100% 50%;
+      width: 60%;
+      height: 150px;
+      background-color: #fff;
+      left: 0;
+      top: -90px;
+    }
+
+  }
+}
