@@ -11,12 +11,23 @@ import React from 'react';
 import {connect} from 'react-redux';
 import StringList from './StringList/StringList'
 import TwitterSelector from './DomainSelector/TwitterSelector'
+import TweetFilter from './TweetFilter/TweetFilter'
 
 class Search extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      includedWords: []
+    };
+    this.getWords = this.getWords.bind(this);
   }
+
+  getWords(words) {
+    this.setState({
+      includedWords: words
+    });
+  }
+
   render() {
     const styles = {
       fontFamily: 'Helvetica Neue',
@@ -27,10 +38,10 @@ class Search extends React.Component {
       alignItems: 'center',
       justifyContent: 'center',
     }
+
     return (
       <div>
-        <StringList />
-        <TwitterSelector />
+        <TweetFilter />
       </div>
     );
   }

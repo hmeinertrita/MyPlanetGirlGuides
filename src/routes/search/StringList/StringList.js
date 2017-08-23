@@ -24,9 +24,6 @@ import s from './StringList.css';
 class StringEntry extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      excluded: ["testword"]
-    };
 
     this.deleteSelf = this.deleteSelf.bind(this);
   }
@@ -49,7 +46,7 @@ class StringList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      excluded: ["testword"],
+      strings: [],
       inputValue: ""
     };
 
@@ -58,35 +55,34 @@ class StringList extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  deleteItem(id) {
-    const excluded=this.state.excluded.map((i) => i);
-    /*
-    let i;
-    for (i=0;i<excluded.length;i++) {
-      if (excluded[i].id === id) {
-        break;
-      }
-    } */
+  returnList() {
+    this.props.returnList(this.state.strings);
+  }
 
-    excluded.splice(id,1);
+  deleteItem(id) {
+    const strings=this.state.strings.map((i) => i);
+
+    strings.splice(id,1);
 
     this.setState({
-      excluded: excluded
+      strings: strings
     });
   }
 
   addItem(event) {
     event.preventDefault();
 
-    const excluded=this.state.excluded.map((i) => i);
+    const strings=this.state.strings.map((i) => i);
     var word=this.state.inputValue;
     word=word.toLowerCase();
-    excluded.splice(0,0,word);
+    strings.splice(0,0,word);
 
     this.setState({
-      excluded: excluded,
+      strings: strings,
       inputValue: ""
     });
+
+    this.props.returnList(strings);
   }
 
   handleChange(event) {
@@ -96,10 +92,12 @@ class StringList extends React.Component {
     }
 
   render() {
-    const excludedWords=this.state.excluded.map((word,idx)=>{
+
+    const strings=this.state.strings.map((word,idx)=>{
       return (
         <StringEntry
           className = {s.entry}
+          key={idx}
           id={idx}
           word={word}
           deleteItem={this.deleteItem}
@@ -113,7 +111,7 @@ class StringList extends React.Component {
           <input type="image" src={addUrl} />
         </form>
         <div className={s.container}>
-          {excludedWords}
+          {strings}
         </div>
       </div>
     );

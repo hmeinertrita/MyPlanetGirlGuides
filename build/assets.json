@@ -5,6 +5,9 @@
   "twitter": {
     "js": "/assets/twitter.chunk.js"
   },
+  "search": {
+    "js": "/assets/search.chunk.js"
+  },
   "login": {
     "js": "/assets/login.chunk.js"
   },
@@ -13,9 +16,6 @@
   },
   "home": {
     "js": "/assets/home.chunk.js"
-  },
-  "search": {
-    "js": "/assets/search.chunk.js"
   },
   "not-found": {
     "js": "/assets/not-found.chunk.js"
