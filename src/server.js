@@ -32,8 +32,15 @@ import configureStore from './store/configureStore';
 import { setRuntimeVariable } from './actions/runtime';
 import config from './config';
 
-const app = express();
+// Import Mongoose & twitter
+import mongoose from 'mongoose';
+import twitter from 'twitter';
+import streamHandler from './data/utils/streamHandler';
 
+// Require Tweet Schema
+import Tweet from './data/models/mongodb/Tweet'
+
+const app = express();
 //
 // Tell any CSS tooling (such as Material UI) to use all vendor prefixes if the
 // user agent is not known.
@@ -108,6 +115,37 @@ app.use(
     pretty: __DEV__,
   })),
 );
+
+//
+// Connect to MongoDB
+// -----------------------------------------------------------------------------
+mongoose.connect('mongodb://localhost/react-tweets');
+let db = mongoose.connection;
+
+db.on('error', function (err) {
+  console.log('Mongoose Error: ', err);
+});
+
+db.once('open', function () {
+  console.log('Mongoose connection successful.');
+});
+
+//
+// Create a new twitter instance
+// -----------------------------------------------------------------------------
+let twit = new twitter(config.auth.twitter);
+
+// Page Route
+app.get('/page/:page/:skip', function(req, res) {
+  console.log(req.params)
+  // Fetch tweets by page via param
+  Tweet.getTweets(0, 0, function(tweets) {
+
+    // Render as JSON
+    res.send(tweets);
+
+  });
+});
 
 //
 // Register server-side rendering middleware
@@ -223,6 +261,10 @@ if (!module.hot) {
     });
   });
 }
+
+twit.stream('statuses/filter',{ track: 'girlscouts,girlguidescanada,girlguides,girlguidescookies'}, function(stream){
+  streamHandler(stream);
+});
 
 //
 // Hot Module Replacement

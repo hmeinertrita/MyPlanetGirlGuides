@@ -2,6 +2,9 @@
   "welcome": {
     "js": "/assets/welcome.chunk.js"
   },
+  "twitter": {
+    "js": "/assets/twitter.chunk.js"
+  },
   "login": {
     "js": "/assets/login.chunk.js"
   },

@@ -33,7 +33,6 @@ class Html extends React.Component {
     styles: [],
     scripts: [],
   };
-
   render() {
     const { title, description, styles, scripts, app, children } = this.props;
     return (
