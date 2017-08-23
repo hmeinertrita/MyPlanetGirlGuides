@@ -17,7 +17,7 @@ class Footer extends React.Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <span className={s.text}>© ApplyBoard</span>
+          <span className={s.text}>© MyPlanet</span>
           <span className={s.spacer}>·</span>
           <Link className={s.link} to="/">
             Home

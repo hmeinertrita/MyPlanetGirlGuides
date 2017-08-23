@@ -1,8 +1,8 @@
 import React from 'react';
 import Tweet from '../Tweet/Tweet';
 
-// import withStyles from 'isomorphic-style-loader/lib/withStyles';
-// import s from './Tweet.css';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import s from './Tweets.css';
 
 class Tweets extends React.Component {
   constructor(props) {
@@ -16,9 +16,9 @@ class Tweets extends React.Component {
       )
     });
     return (
-      <ul className="tweets">{content}</ul>
+      <ul className={s.tweets}>{content}</ul>
     );
   }
 }
 
-export default Tweets;
+export default withStyles(s)(Tweets);
