@@ -1,9 +1,9 @@
 {
-  "welcome": {
-    "js": "/assets/welcome.chunk.js"
-  },
   "twitter": {
     "js": "/assets/twitter.chunk.js"
+  },
+  "welcome": {
+    "js": "/assets/welcome.chunk.js"
   },
   "search": {
     "js": "/assets/search.chunk.js"
