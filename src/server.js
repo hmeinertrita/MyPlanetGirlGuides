@@ -137,7 +137,7 @@ let twit = new twitter(config.auth.twitter);
 
 // Page Route
 app.get('/page/:page/:skip', function(req, res) {
-  console.log(req.params)
+  // console.log(req.params)
   // Fetch tweets by page via param
   Tweet.getTweets(0, 0, function(tweets) {
 
