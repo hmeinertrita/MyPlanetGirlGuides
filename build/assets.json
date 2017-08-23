@@ -5,11 +5,11 @@
   "login": {
     "js": "/assets/login.chunk.js"
   },
-  "home": {
-    "js": "/assets/home.chunk.js"
-  },
   "results": {
     "js": "/assets/results.chunk.js"
+  },
+  "home": {
+    "js": "/assets/home.chunk.js"
   },
   "not-found": {
     "js": "/assets/not-found.chunk.js"
