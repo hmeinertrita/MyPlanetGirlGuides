@@ -84,11 +84,11 @@ class TwitterSelector extends React.Component {
     }
 
     this.props.returnUsers(users);
-    //this.props.returnHashtags(hashtags);
+    this.props.returnHashtags(hashtags);
 
     this.setState({
       users: users,
-      hashtags: hastags
+      hashtags: hashtags
     });
   }
 
@@ -108,7 +108,7 @@ class TwitterSelector extends React.Component {
     }
 
     this.props.returnUsers(users);
-    //this.props.returnHashtags(hashtags);
+    this.props.returnHashtags(hashtags);
 
     this.setState({
       users: users,
