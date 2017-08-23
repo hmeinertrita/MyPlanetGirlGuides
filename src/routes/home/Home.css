@@ -84,18 +84,18 @@ img {
     width: 100%;
     z-index: -1;
     left: 0;
-    background: #00bbe4;
+    background: #00529b;
 
     &:before{
       content: "";
       display: block;
       position: absolute;
-      border-radius: 100% 50%;
+      border-radius: 100% 57%;
       width: 45%;
       height: 120px;
-      background-color: #00bbe4;
-      right: -5px;
-      top: -50px;
+      background-color: #00529b;
+      right: -8px;
+      top: -56px;
     }
     &:after{
       content: "";
