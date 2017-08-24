@@ -1,0 +1,14 @@
+/* csslint ignore:start */
+
+@import '../../../components/variables.css';
+
+.tweets
+{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: black;
+}
+
+
+/* csslint ignore:end */

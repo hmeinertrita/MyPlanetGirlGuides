@@ -31,6 +31,11 @@ class Navigation extends React.Component {
        <Link className={cx(s.link, s.highlight)} to="/twitter">
          Tweets
        </Link>
+       <span className={s.spacer}> | </span>
+       <Link className={cx(s.link, s.highlight)} to="/watson">
+         Watson Tone Analyzer
+       </Link>
+       <span className={s.spacer}> | </span>
        <Link className={cx(s.link, s.highlight)} to="/search">
          Search
        </Link>

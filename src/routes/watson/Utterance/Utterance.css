@@ -1,0 +1,113 @@
+/* csslint ignore:start */
+
+@import '../../../components/variables.css';
+
+.tweet
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    max-height: 0px;
+    margin: 0;
+
+    list-style-type: none;
+
+    color: #2c3e50;
+    border-radius: 3px;
+    background: white;
+    box-shadow: 0 3px 0 #eee;
+}
+
+.tweet.active
+{
+    max-height: 125px;
+    margin: 20px 0;
+
+    -webkit-transition: 1s all ease;
+       -moz-transition: 1s all ease;
+        -ms-transition: 1s all ease;
+         -o-transition: 1s all ease;
+            transition: 1s all ease;
+}
+
+.tweet .avatar
+{
+    position: relative;
+
+    display: inline-block;
+    float: left;
+
+    width: 48px;
+    margin: 10px;
+
+    border: 2px solid #ccc;
+    border-radius: 48px;
+}
+
+.tweet blockquote
+{
+    font-size: 14px;
+
+    display: inline-block;
+    float: right;
+
+    width: calc(100% - 72px);
+    margin: 0;
+    padding: 10px;
+}
+
+.tweet blockquote cite
+{
+    font-weight: bold;
+    font-style: normal;
+}
+
+.tweet blockquote cite a
+{
+    display: inline-block;
+
+    margin-right: 5px;
+
+    text-decoration: none;
+
+    color: #1abc9c;
+}
+
+.tweet blockquote cite a:hover
+{
+    text-decoration: underline;
+}
+
+.tweet blockquote .screen-name
+{
+    font-size: 13px;
+    font-weight: normal;
+
+    color: #ccc;
+}
+
+.tweet blockquote .content
+{
+    display: block;
+    clear: left;
+
+    margin-top: 5px;
+}
+
+.tweet:before,
+.tweet:after
+{
+    display: table;
+
+    content: ' ';
+}
+
+.tweet:after
+{
+    clear: both;
+}
+
+
+/* csslint ignore:end */
