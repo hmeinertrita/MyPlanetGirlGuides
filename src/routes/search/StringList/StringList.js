@@ -104,10 +104,12 @@ class StringList extends React.Component {
     });
     return (
       <div className={s.root}>
+        <div className={s.instructions}>enter words and phrases</div>
         <form className={s.addForm} onSubmit={this.addItem}>
           <input className={s.addField} onChange={this.handleChange} value={this.state.inputValue}/>
           <input type="image" src={addUrl} />
         </form>
+        Words:
         <div className={s.container}>
           {strings}
         </div>
