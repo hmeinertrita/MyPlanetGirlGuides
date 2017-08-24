@@ -22,8 +22,7 @@ class Home extends React.Component {
           <div className={s.main}>
             <div className={s.intro}>Girl Greatness Starts Here</div>
             <a href="/search">Get Started</a>
-            <div className={s.background}></div>
-            <div className={s.background_second_layer}></div>
+            <div className={s.bg}></div>
           </div>
         </div>
       </div>

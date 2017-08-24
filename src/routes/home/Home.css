@@ -47,67 +47,48 @@ img {
 
 .main {
   padding-top: 30vh;
-  
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 
+  color: #fff;
+
+  .bg {
+    top: 0px;
+    bottom: 0px;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+    background: #7474BF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00549E, #739DD2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #00549E, #739DD2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
   .intro{
-    font-size: 30px;
+    font-size: 50px;
   }
 
   a {
     font-size: 20px;
     text-decoration-line: none;
-    margin-top: 20px;
-    padding: 15px 20px;
-    background-color: #004077;
-    border-radius: 5px;
+    margin-top: 30px;
+    padding: 10px 30px;
+    border: 2px solid #fff;
+    border-radius: 40px;
     color: #fff;
-    border: 0 none;
     -webkit-transition: .3s ease all;
     -moz-transition: .3s ease all;
     -ms-transition: .3s ease all;
     -o-transition: .3s ease all;
     transition: .3s ease all;
     &:hover {
-      background-color: #749dd3;
-    }
-  }
-
-
-  .background {
-    position: absolute;
-    top: 55vh;
-    bottom: 0;
-    width: 100%;
-    z-index: -1;
-    left: 0;
-    background: #00529b;
-
-    &:before{
-      content: "";
-      display: block;
-      position: absolute;
-      border-radius: 100% 57%;
-      width: 45%;
-      height: 120px;
-      background-color: #00529b;
-      right: -8px;
-      top: -56px;
-    }
-    &:after{
-      content: "";
-      display: block;
-      position: absolute;
-      border-radius: 100% 50%;
-      width: 60%;
-      height: 150px;
+      color: #00549E;
+      border: 2px solid #fff;
       background-color: #fff;
-      left: 0;
-      top: -90px;
     }
-
   }
+
+
+  
 }
