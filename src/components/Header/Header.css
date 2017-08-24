@@ -25,6 +25,7 @@
 }
 
 .brand {
+  padding-left: 10px;
   color: color(var(--brand-color) lightness(+10%));
   text-decoration: none;
   font-size: 1.75em; /* ~28px */
@@ -38,4 +39,13 @@
 .brandTxt {
   margin-left: 10px;
   color: #fff;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 8px 0px;
+  }
+  .brandTxt {
+    display: none;
+  }
 }

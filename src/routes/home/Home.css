@@ -101,3 +101,11 @@ img {
 
   
 }
+
+
+@media (max-width: 600px) {
+  .main {
+    padding-top: 20vh;
+    text-align: center;
+  }
+}
