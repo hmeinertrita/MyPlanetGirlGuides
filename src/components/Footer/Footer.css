@@ -10,6 +10,7 @@
 @import '../variables.css';
 
 .root {
+  display: none;
   background: #333;
   color: #fff;
   position: fixed;

@@ -18,7 +18,13 @@ class Home extends React.Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <Page title="" {...home} />
+          {/* <Page title="" {...home} /> */}
+          <div className={s.main}>
+            <div className={s.intro}>Girl Greatness Starts Here</div>
+            <a href="/search">Get Started</a>
+            <div className={s.bg}></div>
+            <div className={s.bg_wave}></div>
+          </div>
         </div>
       </div>
     );
