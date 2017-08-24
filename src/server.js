@@ -144,9 +144,9 @@ db.once('open', function () {
 let twit = new twitter(config.auth.twitter);
 
 // Create twitter stream
-// twit.stream('statuses/filter',{ track: 'girlscouts,girlguidescanada,girlguides,girlguidescookies'}, function(stream){
-//   streamHandler(stream);
-// });
+twit.stream('statuses/filter',{ track: 'girlscouts,girlguidescanada,girlguides,girlguidescookies'}, function(stream){
+  streamHandler(stream);
+});
 
 // Twitter and Watson Utterances Tone JSON endpoint
 // Go to localhost:3000/page/0/0
