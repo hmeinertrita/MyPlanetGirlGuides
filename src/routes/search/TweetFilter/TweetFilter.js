@@ -12,6 +12,7 @@ import { connect } from 'react-redux';
 import StringList from '../StringList/StringList';
 import TwitterSelector from '../DomainSelector/TwitterSelector';
 import Tweets from '../../twitter/Tweets/Tweets';
+import ToneBox from '../../tone-analysis/ToneBox/ToneBox';
 
 import axios from 'axios';
 
@@ -26,7 +27,9 @@ class TweetFilter extends React.Component {
       includedUsers: [],
       includedHastags: [],
       tweets: [],
+      utterances: [],
       filteredTweets: [],
+      averageTones: []
     };
     this.getWords = this.getWords.bind(this);
     this.getUsers = this.getUsers.bind(this);
@@ -63,8 +66,19 @@ class TweetFilter extends React.Component {
     });
   }
 
+  getUtterances() {
+    const self = this;
+    axios.get(`/page/${this.state.page}/${this.state.skip}`).then((response) => {
+      console.log(response.data);
+      self.setState({ utterances: response.data.utterancesTone.utterances_tone });
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
+
   componentDidMount() {
     this.getTweets();
+    this.getUtterances();
   }
 
   filter() {
@@ -107,14 +121,57 @@ class TweetFilter extends React.Component {
 
       return (users && words && hashtags);
     });
+
+    const utterances=tweets.map((tweet) => {
+      return this.state.utterances[this.state.tweets.indexOf(tweet)];
+    });
+
+    let tones=[];
+
+    for (var i=0;i<utterances.length;i++) {
+      for (var j=0;j<utterances[i].tones.length;j++) {
+        let idx=-1;
+        for (var k=0;k<tones.length;k++) {
+          if (tones[k].tone_name === utterances[i].tones[j].tone_name) {
+            idx=k;
+
+            break;
+          }
+        }
+
+        if (idx !== -1) {
+          tones[idx].scores.push(utterances[i].tones[j].score);
+        }
+        else {
+          tones.push({
+            tone_name: utterances[i].tones[j].tone_name,
+            scores: [utterances[i].tones[j].score]
+          });
+        }
+      }
+    }
+
+    const averageTones = tones.map((tone) => {
+      let score=0;
+      for (var i=0; i<tone.scores.length; i++) {
+        score+=tone.scores[i];
+      }
+      score=score/tone.scores.length;
+
+      return ({
+        tone_name: tone.tone_name,
+        score: score
+      });
+    });
+
     this.setState({
       filteredTweets: tweets,
+      averageTones: averageTones
     });
   }
 
   render() {
-    console.log('filteredTweets:', this.state.filteredTweets);
-    console.log('tweets:', this.state.tweets);
+    console.log('tweet filter state',this.state);
     return (
       <div className={s.root}>
         <div className={s.params}>
@@ -123,6 +180,9 @@ class TweetFilter extends React.Component {
             <TwitterSelector returnUsers={this.getUsers} returnHashtags={this.getHashtags} />
           </div>
           <button className={s.button} onClick={this.filter}>Find Tweets</button>
+        </div>
+        <div className={s.utterances}>
+          <ToneBox utterances={this.state.averageTones} />
         </div>
         <div className={s.tweets}>
           <Tweets tweets={this.state.filteredTweets} />
