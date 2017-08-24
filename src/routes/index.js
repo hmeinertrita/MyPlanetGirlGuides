@@ -43,6 +43,10 @@ const routes = {
       path: '/twitter',
       load: () => import(/* webpackChunkName: 'twitter' */ './twitter'),
     },
+    {
+      path: '/watson',
+      load: () => import(/* webpackChunkName: 'not-found' */ './watson'),
+    },
     // Wildcard routes, e.g. { path: '*', ... } (must go last)
     {
       path: '*',

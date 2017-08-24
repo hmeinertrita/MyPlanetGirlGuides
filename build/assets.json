@@ -1,4 +1,7 @@
 {
+  "not-found": {
+    "js": "/assets/not-found.chunk.js"
+  },
   "search": {
     "js": "/assets/search.chunk.js"
   },
@@ -16,9 +19,6 @@
   },
   "home": {
     "js": "/assets/home.chunk.js"
-  },
-  "not-found": {
-    "js": "/assets/not-found.chunk.js"
   },
   "details": {
     "js": "/assets/details.chunk.js"
