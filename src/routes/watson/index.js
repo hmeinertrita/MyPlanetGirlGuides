@@ -1,8 +1,8 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import TweetsApp from './TweetsApp';
+import WatsonApp from './WatsonApp';
 
-const title = 'Tweets';
+const title = 'Watson';
 
 function action() {
   return {
@@ -10,7 +10,7 @@ function action() {
     title,
     component: (
       <Layout>
-        <TweetsApp title={title} />
+        <WatsonApp title={title} />
       </Layout>
     ),
   };

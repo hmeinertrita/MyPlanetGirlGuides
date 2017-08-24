@@ -56,7 +56,7 @@ class TweetFilter extends React.Component {
   getTweets() {
     const self = this;
     axios.get(`/page/${this.state.page}/${this.state.skip}`).then((response) => {
-      console.log(response.data);
+      console.log('endpoint response data', response.data);
       self.setState({ tweets: response.data.tweets });
     }).catch((error) => {
       console.log(error);
@@ -113,8 +113,8 @@ class TweetFilter extends React.Component {
   }
 
   render() {
-    console.log('filteredTweets:', this.state.filteredTweets);
-    console.log('tweets:', this.state.tweets);
+    // console.log('filteredTweets:', this.state.filteredTweets);
+    // console.log('tweets:', this.state.tweets);
     return (
       <div className={s.root}>
         <div className={s.params}>
