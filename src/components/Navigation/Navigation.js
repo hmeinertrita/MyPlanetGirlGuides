@@ -14,33 +14,54 @@ import s from './Navigation.css';
 import Link from '../Link';
 
 class Navigation extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {isToggleOn: false};
+    this.toggleMenu = this.toggleMenu.bind(this);
+  }
+
+  toggleMenu() {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+  }
+
  render() {
    return (
-     <div className={s.root} role="navigation">
-       {/* <Link className={s.link} to="/about">
-         About
-       </Link>
-       <Link className={s.link} to="/contact">
-         Contact
-       </Link>
-       <span className={s.spacer}> | </span>
-       <Link className={s.link} to="/login">
-         Log in
-       </Link>
-       <span className={s.spacer}>or</span> */}
-       <Link className={cx(s.link, s.highlight)} to="/twitter">
-         Tweets
-       </Link>
-       <span className={s.spacer}> | </span>
-       <Link className={cx(s.link, s.highlight)} to="/watson">
-         Watson Tone Analyzer
-       </Link>
-       <span className={s.spacer}> | </span>
-       <Link className={cx(s.link, s.highlight)} to="/search">
-         Search
-       </Link>
-       <span className={s.menu_res}>dd</span>
-     </div>
+     <div>
+      <div className={s.root} role="navigation">
+        {/* <Link className={s.link} to="/about">
+          About
+        </Link>
+        <Link className={s.link} to="/contact">
+          Contact
+        </Link>
+        <span className={s.spacer}> | </span>
+        <Link className={s.link} to="/login">
+          Log in
+        </Link>
+        <span className={s.spacer}>or</span> */}
+        <div className={cx(s.links,this.state.isToggleOn?s.on:s.off)}>
+          <Link className={cx(s.link, s.highlight)} to="/twitter">
+            Tweets
+          </Link>
+          <Link className={cx(s.link, s.highlight)} to="/search">
+            Search
+          </Link>
+          <Link className={cx(s.link, s.highlight)} to="/watson">
+            Watson Tone Analyzer
+          </Link>
+        </div>
+
+        <div className={cx(s.menu_res,this.state.isToggleOn?s.on:s.off)} onClick={this.toggleMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+      </div>
+
+    </div>
    );
  }
 }
