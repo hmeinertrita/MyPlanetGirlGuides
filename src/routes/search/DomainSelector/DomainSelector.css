@@ -1,25 +1,45 @@
+.root {
+  margin: 10px;
+}
+
 .users {
   margin: 10px 0px;
   width: 170px;
-  height: 50px;
+  height: 115px;
   overflow: auto;
+
+  border-radius: 20px;
+  border: 2px solid silver;
 }
 
 .hashtags {
   margin: 10px 0px;
   width: 170px;
-  height: 50px;
+  height: 115px;
   overflow: auto;
+
+  border-radius: 20px;
+  border: 2px solid silver;
+}
+
+.instructions {
+  width: 160px;
+  color: silver;
+  font-size: 12px;
 }
 
 .entry {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  opacity: 0.7;
 
-  width: 150px;
+  flex-shrink: 0;
+  flex-grow: 0;
+
+  width: 145px;
   height: 24px;
-  margin-top: 5px;
+  margin: 10px;
 
   font-size: 7;
   color: #878c96;
@@ -46,9 +66,10 @@
 }
 
 .addForm {
-  width: 200px;
+  width: 180px;
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .addField {

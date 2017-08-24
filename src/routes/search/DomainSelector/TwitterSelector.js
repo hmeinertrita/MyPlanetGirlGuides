@@ -161,6 +161,7 @@ class TwitterSelector extends React.Component {
         <input type='radio' name='mode' value='exclusive' onChange={this.handleRadio}/>Exclusive
         <input type='radio' name='mode' value='inclusive' onChange={this.handleRadio}/>Inclusive
         */}
+        <div className={s.instructions}>use '@' and '#' to filter further</div>
 
         <form className={s.addForm} onSubmit={this.addItem}>
           <input className={s.addField} onChange={this.handleChange} value={this.state.inputValue}/>
