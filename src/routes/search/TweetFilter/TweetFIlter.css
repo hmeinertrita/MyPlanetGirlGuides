@@ -2,9 +2,15 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  color: #a0a0a0;
+  flex-shrink: 1;
+
+  height: 600px;
 }
 
 .tweets {
+  flex-shrink: 1;
+
   margin: 0 50px;
   width: 400px;
   height: 600px;
@@ -12,6 +18,8 @@
 }
 
 .searches {
+  flex-shrink: 1;
+
   margin: 50px;
   display: flex;
   flex-direction: row;
@@ -19,6 +27,8 @@
 }
 
 .params {
+  flex-shrink: 1;
+
   display: flex;
   flex-direction: column;
   align-items: center;
