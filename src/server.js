@@ -156,6 +156,12 @@ app.get('/page/:page/:skip', function(req, res) {
   Tweet.getTweets(0, 0, function(tweets) {
 
     console.log('THE TWEETS', tweets);
+
+    var tweetsBody = tweets.map(function (tweet, index, array) {
+      return tweet.body;
+    });
+
+    console.log('tweets', tweetsBody)
     //
     var params = {
       // Get the text from the JSON file
