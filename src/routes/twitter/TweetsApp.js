@@ -75,7 +75,7 @@ class TweetsApp extends React.Component {
       // return response.data;
       console.log(response.data);
       // }.then(function(response.data) {
-      self.setState({tweets: response.data});
+      self.setState({tweets: response.data.tweets});
       // });
     }).catch(function(error) {
       console.log(error);

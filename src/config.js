@@ -68,5 +68,12 @@ module.exports = {
       access_token_key: '298940916-kvCW13qGVL3O4zIAhqTsH5DcmXCR380di2JaqjcC',
       access_token_secret: 'R7c1UIrzb1NxCCXUM9MREcn6siWgvH0FaH2GnlzZSnU5c',
     },
+
+    // Tone analyzer Watson-API
+    watson: {
+      username: 'af0d0696-7a51-4431-b7b6-b09ba6099756',
+      password: 'Ib0q6zegsm1x',
+      version_date: '2016-05-19'
+    },
   },
 };

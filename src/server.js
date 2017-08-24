@@ -35,12 +35,20 @@ import config from './config';
 // Import Mongoose & twitter
 import mongoose from 'mongoose';
 import twitter from 'twitter';
-import streamHandler from './data/utils/streamHandler';
+
+// Import Tone Analyzer Watson API
+import ToneAnalyzerV3 from 'watson-developer-cloud/tone-analyzer/v3';
 
 // Require Tweet Schema
 import Tweet from './data/models/mongodb/Tweet'
+import streamHandler from './data/utils/streamHandler';
 
 const app = express();
+
+//
+// Tone Analyzer Watson API
+// -----------------------------------------------------------------------------
+let tone_analyzer = new ToneAnalyzerV3(config.auth.watson);
 //
 // Tell any CSS tooling (such as Material UI) to use all vendor prefixes if the
 // user agent is not known.
@@ -131,19 +139,44 @@ db.once('open', function () {
 });
 
 //
-// Create a new twitter instance
+// Twitter API
 // -----------------------------------------------------------------------------
 let twit = new twitter(config.auth.twitter);
 
-// Page Route
+// Create twitter stream
+twit.stream('statuses/filter',{ track: 'girlscouts,girlguidescanada,girlguides,girlguidescookies'}, function(stream){
+  streamHandler(stream);
+});
+
+// Twitter and Watson Utterances Tone JSON endpoint
+// Go to localhost:3000/page/0/0
 app.get('/page/:page/:skip', function(req, res) {
-  console.log(req.params)
+  // console.log(req.params)
   // Fetch tweets by page via param
   Tweet.getTweets(0, 0, function(tweets) {
+    // console.log('THE TWEETS', tweets);
 
-    // Render as JSON
-    res.send(tweets);
+    // Instantiate new utterancesObj to match required intake params
+    // of Watson API
+    let utterancesObj = {
+      utterances: tweets.map(tweet => ({
+        text: tweet.body
+      }))
+    };
 
+    tone_analyzer.tone_chat(utterancesObj, function(error, response) {
+      if (error)
+        console.log('error:', error);
+        // res.send(500);
+      else
+        // console.log(JSON.stringify(response, null, 2));
+
+        var utterancesTone = response;
+
+        // Render as both tweets and utterances tone as JSON
+        res.send({tweets, utterancesTone});
+      }
+    );
   });
 });
 
@@ -261,10 +294,6 @@ if (!module.hot) {
     });
   });
 }
-
-twit.stream('statuses/filter',{ track: 'girlscouts,girlguidescanada,girlguides,girlguidescookies'}, function(stream){
-  streamHandler(stream);
-});
 
 //
 // Hot Module Replacement
