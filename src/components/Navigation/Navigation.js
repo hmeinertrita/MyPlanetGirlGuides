@@ -34,6 +34,7 @@ class Navigation extends React.Component {
        <Link className={cx(s.link, s.highlight)} to="/search">
          Search
        </Link>
+       <span className={s.menu_res}>dd</span>
      </div>
    );
  }

@@ -28,3 +28,13 @@
 .link:hover {
   color: rgba(255, 255, 255, 1);
 }
+
+.menu_res {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .menu_res {
+    display: inline-block;
+  }
+}
