@@ -1,8 +1,12 @@
 .root {
   margin: 10px;
+  flex-shrink: 1;
+
 }
 
 .users {
+
+  flex-shrink: 1;
   margin: 10px 0px;
   width: 170px;
   height: 115px;
@@ -13,6 +17,8 @@
 }
 
 .hashtags {
+  
+  flex-shrink: 1;
   margin: 10px 0px;
   width: 170px;
   height: 115px;
