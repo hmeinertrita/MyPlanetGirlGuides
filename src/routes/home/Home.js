@@ -23,6 +23,7 @@ class Home extends React.Component {
             <div className={s.intro}>Girl Greatness Starts Here</div>
             <a href="/search">Get Started</a>
             <div className={s.bg}></div>
+            <div className={s.bg_wave}></div>
           </div>
         </div>
       </div>

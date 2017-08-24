@@ -1,0 +1,32 @@
+
+<svg width="1024px" height="383px" viewBox="0 0 1024 383" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M-0.702031192,338.046673 C16.5138049,323.424387 41.1844902,316.22156 73.3100249,316.438191 C182.718676,317.175961 193.391758,416.791391 303.827823,417.004524 C414.263888,417.217658 525.578684,249.882091 682.440778,247.563204 C744.300568,246.648733 858.61676,282.048971 1025.38935,353.763919 L1025.38935,581.625743 L-0.702031192,581.625743 L-0.702031192,338.046673 Z" id="path-1"></path>
+        <filter x="-0.7%" y="-1.5%" width="101.4%" height="104.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.93452381   0 0 0 0 0.93452381   0 0 0 0 0.93452381  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M0,471.878264 C100.681364,398.174068 189.821434,361.32197 267.420209,361.32197 C410.51492,361.32197 432.801638,421.416274 568.135516,420.185136 C754.365217,418.490996 884.540745,244.415383 1024,205.21517 C1024,205.21517 1024.80099,329.565124 1026.40298,578.265031 L1.05718692e-14,578.265031 L0,471.878264 Z" id="path-3"></path>
+        <filter x="-3.4%" y="-9.4%" width="106.8%" height="118.8%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="20" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="30" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.824561404   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(0.000000, -205.000000)">
+            <g id="Path-3" opacity="0.4">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#00BCE4" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <g id="Path-4" opacity="0.65">
+                <use fill="#66E4FF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+            </g>
+        </g>
+    </g>
+</svg>
