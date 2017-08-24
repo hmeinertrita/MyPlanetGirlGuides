@@ -11,6 +11,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import StringList from '../StringList/StringList'
 import TwitterSelector from '../DomainSelector/TwitterSelector'
+import Tweets from '../../twitter/Tweets/Tweets'
 import axios from 'axios';
 
 class TweetFilter extends React.Component {
@@ -113,11 +114,15 @@ class TweetFilter extends React.Component {
 
   render() {
     console.log('filteredTweets:',this.state.filteredTweets);
+    console.log('tweets:',this.state.tweets);
     return (
       <div>
-        <StringList returnList={this.getWords}/>
-        <TwitterSelector returnUsers={this.getUsers} returnHashtags={this.getHashtags}/>
-        <button onClick={this.filter}>Go!</button>
+        <div>
+          <StringList returnList={this.getWords}/>
+          <TwitterSelector returnUsers={this.getUsers} returnHashtags={this.getHashtags}/>
+          <button onClick={this.filter}>Go!</button>
+        </div>
+        <Tweets tweets={this.state.filteredTweets}/>
       </div>
     );
   }
