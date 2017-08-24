@@ -100,7 +100,6 @@ class ToneBox extends React.Component {
     });
     return (
       <div className={s.root}>
-        hello
         {tones}
       </div>
     );
