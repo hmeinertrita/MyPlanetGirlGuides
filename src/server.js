@@ -148,38 +148,35 @@ twit.stream('statuses/filter',{ track: 'girlscouts,girlguidescanada,girlguides,g
   streamHandler(stream);
 });
 
-// Twitter JSON endpoint
+// Twitter and Watson Utterances Tone JSON endpoint
 // Go to localhost:3000/page/0/0
 app.get('/page/:page/:skip', function(req, res) {
   // console.log(req.params)
   // Fetch tweets by page via param
   Tweet.getTweets(0, 0, function(tweets) {
+    // console.log('THE TWEETS', tweets);
 
-    console.log('THE TWEETS', tweets);
-
-    var tweetsBody = tweets.map(function (tweet, index, array) {
-      return tweet.body;
-    });
-
-    console.log('tweets', tweetsBody)
-    //
-    var params = {
-      // Get the text from the JSON file
-      text: tweets[0].body,
-      tones: 'emotion'
+    // Instantiate new utterancesObj to match required intake params
+    // of Watson API
+    let utterancesObj = {
+      utterances: tweets.map(tweet => ({
+        text: tweet.body
+      }))
     };
 
-    tone_analyzer.tone(params, function(error, response) {
+    tone_analyzer.tone_chat(utterancesObj, function(error, response) {
       if (error)
         console.log('error:', error);
+        // res.send(500);
       else
-        console.log(JSON.stringify(response, null, 2));
+        // console.log(JSON.stringify(response, null, 2));
+
+        var utterancesTone = response;
+
+        // Render as both tweets and utterances tone as JSON
+        res.send({tweets, utterancesTone});
       }
     );
-
-    // Render as JSON
-    res.send(tweets);
-
   });
 });
 
