@@ -171,7 +171,7 @@ class TweetFilter extends React.Component {
   }
 
   render() {
-    console.log('tweet filter state',this.state);
+    // console.log('tweet filter state',this.state);
     return (
       <div className={s.root}>
         <div className={s.params}>

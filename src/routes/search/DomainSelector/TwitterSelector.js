@@ -131,6 +131,7 @@ class TwitterSelector extends React.Component {
   }
 
   render() {
+    // console.log('twitter selector state', this.state);
     const users=this.state.users.map((text,idx)=>{
       return (
         <TwitterEntry
