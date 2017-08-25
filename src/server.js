@@ -144,7 +144,7 @@ db.once('open', function () {
 let twit = new twitter(config.auth.twitter);
 
 // Create twitter stream
-twit.stream('statuses/filter',{ track: 'girlscouts,girlguidescanada,girlguides,girlguidescookies'}, function(stream){
+twit.stream('statuses/filter',{ track: 'girlscouts,girlguidescanada,girlguides,girlguidescookies,myplanet'}, function(stream){
   streamHandler(stream);
 });
 

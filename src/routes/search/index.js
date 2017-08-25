@@ -2,12 +2,12 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import Search from './Search';
 
-const title = 'swag';
+const title = 'Search';
 
 function action() {
   return {
     chunks: ['welcome'],
-    title: 'Welcome',
+    title: 'Search',
     component: (
       <Layout>
         <Search title={title} />
