@@ -17,7 +17,7 @@
 }
 
 .hashtags {
-  
+
   flex-shrink: 1;
   margin: 10px 0px;
   width: 170px;
@@ -81,4 +81,5 @@
 .addField {
   width: 150px;
   border-radius: 12px;
+  border: 2px solid silver;
 }

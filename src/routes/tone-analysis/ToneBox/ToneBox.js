@@ -95,12 +95,16 @@ class ToneBox extends React.Component {
     let tones = this.props.utterances.map((tone,idx) => {
       console.log('tone: ',tone);
       return (
-        <div key={idx}>{tone.tone_name+': '+tone.score}</div>
+        <div className={s.entry} key={idx}>
+          <div className={s.text}>{tone.tone_name}</div>
+          <div className={s.text}>{tone.score.toFixed(3)}</div>
+        </div>
       );
     });
     return (
       <div className={s.root}>
-        {tones}
+        <div className={s.title}>Tones:</div>
+        <div className={s.tones}>{tones}</div>
       </div>
     );
   }
