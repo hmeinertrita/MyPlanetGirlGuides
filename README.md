@@ -1,4 +1,8 @@
-# Getting Started - React/Express Boilerplate
+# MyPlanet x Girl Guides Canada Twitter Watson Tone Analyzer App
+
+## Screenshots
+
+TBD
 
 ## Requirements
 
@@ -60,7 +64,14 @@ $ cd MyPlanetGirlGuides
 This will install both run-time project dependencies and developer tools listed
 in [package.json](../package.json) file.
 
-### 3. Run `yarn start`
+
+### 3. Set up MongoDB database to store tweets `react-tweets`
+
+  1. [Install MongoDB](https://www.mongodb.com/)
+  2. `use react-tweets` to create database named react-tweets
+  3. Start mongo service `brew start mongodb` and `mongo`
+
+### 4. Run `yarn start`
 
 This command will build the app from the source files (`/src`) into the output
 `/build` folder. As soon as the initial build completes, it will start the
