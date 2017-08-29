@@ -11,7 +11,7 @@ GirlGuidesCanada is embarking on a massive change which will impact all of its m
 
 ## Our solution
 * Created an application that allows the client to gather data from social media 
-	→ Currently using Twitter API but scalable to other social media APIs 
+* Currently using Twitter API but scalable to other social media APIs 
 * We gathered data from these five hashtags: 
   #GirlGuides, #GirlGuidesCanada, #GirlGuidesCookies, #GirlScouts, #MyPlanet
 * We want the client to be able to hear people's thoughts and opinions on this change, therefore allowed filtering of tweets based on key words, hashtags or twitter handle. 
