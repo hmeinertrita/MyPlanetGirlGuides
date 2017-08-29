@@ -1,5 +1,22 @@
 # MyPlanet x Girl Guides Canada Twitter Watson Tone Analyzer App
 
+## Team Members
+* Dong Hu
+* Harrison Meinert-Rita
+* Chang Liu
+* Shwetha Sivakumar
+
+## Problem statement
+GirlGuidesCanada is embarking on a massive change which will impact all of its members is some way, shape or form (~100k).  Girls, parents, Guiders or other Sr. volunteers have no centralized way to share what they feel/think about the change and we have no way to hear, analyze and consolidate 'the pulse' of the field. We need a better way to get at this information to help us make decisions in real time! 
+
+## Our solution
+* Created an application that allows the client to gather data from social media 
+	→ Currently using Twitter API but scalable to other social media APIs 
+* We gathered data from these five hashtags: 
+  #GirlGuides, #GirlGuidesCanada, #GirlGuidesCookies, #GirlScouts, #MyPlanet
+* We want the client to be able to hear people's thoughts and opinions on this change, therefore allowed filtering of tweets based on key words, hashtags or twitter handle. 
+* Analyzed the sentiment (joy, fear, sadness, disguist, anger) of each tweet body using Watson Tone Analyzer API 
+
 ## Screenshots
 
 TBD
