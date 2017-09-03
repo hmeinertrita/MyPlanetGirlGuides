@@ -17,7 +17,7 @@ GirlGuidesCanada is embarking on a massive change which will impact all of its m
 * We want the client to be able to hear people's thoughts and opinions on this change, therefore allowed filtering of tweets based on key words, hashtags or twitter handle.
 * Analyzed the sentiment (joy, fear, sadness, disguist, anger) of each tweet body using Watson Tone Analyzer API
 
-## Screenshots
+## Screenshot
 
 ![](./public/demo.gif)
 
