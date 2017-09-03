@@ -1,4 +1,25 @@
-# Getting Started - React/Express Boilerplate
+# MyPlanet x Girl Guides Canada Twitter Watson Tone Analyzer App
+
+## Team Members
+* Dong Hu
+* Harrison Meinert-Rita
+* Chang Liu
+* Shwetha Sivakumar
+
+## Problem statement
+GirlGuidesCanada is embarking on a massive change which will impact all of its members is some way, shape or form (~100k).  Girls, parents, Guiders or other Sr. volunteers have no centralized way to share what they feel/think about the change and we have no way to hear, analyze and consolidate 'the pulse' of the field. We need a better way to get at this information to help us make decisions in real time! 
+
+## Our solution
+* Created an application that allows the client to gather data from social media 
+* Currently using Twitter API but scalable to other social media APIs 
+* We gathered data from these five hashtags: 
+  #GirlGuides, #GirlGuidesCanada, #GirlGuidesCookies, #GirlScouts, #MyPlanet
+* We want the client to be able to hear people's thoughts and opinions on this change, therefore allowed filtering of tweets based on key words, hashtags or twitter handle. 
+* Analyzed the sentiment (joy, fear, sadness, disguist, anger) of each tweet body using Watson Tone Analyzer API 
+
+## Screenshots
+
+TBD
 
 ## Requirements
 
@@ -60,7 +81,14 @@ $ cd MyPlanetGirlGuides
 This will install both run-time project dependencies and developer tools listed
 in [package.json](../package.json) file.
 
-### 3. Run `yarn start`
+
+### 3. Set up MongoDB database to store tweets `react-tweets`
+
+  1. [Install MongoDB](https://www.mongodb.com/)
+  2. `use react-tweets` to create database named react-tweets
+  3. Start mongo service `brew start mongodb` and `mongo`
+
+### 4. Run `yarn start`
 
 This command will build the app from the source files (`/src`) into the output
 `/build` folder. As soon as the initial build completes, it will start the
