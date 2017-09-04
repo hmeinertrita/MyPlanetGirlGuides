@@ -7,7 +7,7 @@
 * Shwetha Sivakumar
 
 ## Problem statement
-GirlGuidesCanada is embarking on a massive change which will impact all of its members is some way, shape or form (~100k).  Girls, parents, Guiders or other Sr. volunteers have no centralized way to share what they feel/think about the change and we have no way to hear, analyze and consolidate 'the pulse' of the field. We need a better way to get at this information to help us make decisions in real time!
+GirlGuidesCanada is embarking on a massive change which will impact all of its members in some way, shape or form (~100k).  Girls, parents, Guiders or other Sr. volunteers have no centralized way to share what they feel/think about the change and we have no way to hear, analyze and consolidate 'the pulse' of the field. We need a better way to get at this information to help us make decisions in real time!
 
 ## Our solution
 * Created an application that allows the client to gather data from social media
