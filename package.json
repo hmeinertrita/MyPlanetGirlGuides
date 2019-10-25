@@ -29,7 +29,7 @@
     "isomorphic-style-loader": "^3.0.0",
     "jsonwebtoken": "^7.4.1",
     "lodash": ">=4.17.5",
-    "mongoose": "^4.11.7",
+    "mongoose": "^5.7.5",
     "node-fetch": "^1.7.1",
     "normalize.css": "^7.0.0",
     "passport": "^0.3.2",
